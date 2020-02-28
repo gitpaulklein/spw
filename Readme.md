@@ -1,3 +1,3 @@
-= Hello GitHub
+# Hello GitHub
 
 Hallo Hallo Hallo
