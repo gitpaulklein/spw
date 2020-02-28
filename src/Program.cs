@@ -12,17 +12,15 @@ namespace FibonacciSeries {
       Console.Out.WriteLine();
     }
 
-    static int CreateFibonacciNumber(int index) {
-      if (index == 0) return 0;
-      if (index == 1) return 1;
-      return CreateFibonacciNumber(index - 1) + CreateFibonacciNumber(index - 2);
-    }
-
     static int[] CreateFibonacciSeries(int count) {
-      int[] fibonacciSeries = new int[count];
-      for (int i = 0; i < count; i++)
-        fibonacciSeries[i] = CreateFibonacciNumber(i);
-      return fibonacciSeries;
+      int[] fibonacci = new int[count];
+      fibonacci[0] = 0;
+      fibonacci[1] = 1;
+
+      for (int i = 2; i < count; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+      }
+      return fibonacci;
     }
   }
 }
