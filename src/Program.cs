@@ -13,8 +13,8 @@ namespace FibonacciSeries {
     }
 
     static int CreateFibonacciNumber(int index) {
-      if (index == 0) return 0;
       if (index == 1) return 1;
+      if (index == 0) return 0;
       return CreateFibonacciNumber(index - 1) + CreateFibonacciNumber(index - 2);
     }
 
